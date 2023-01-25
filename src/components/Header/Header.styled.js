@@ -13,6 +13,9 @@ export const HeaderWrapper = styled.header`
 
   /* outline: 1px solid red; */
   width: 320px;
+  ${props => props.scroll <= 69} {
+    background: green;
+  }
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

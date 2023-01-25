@@ -1,5 +1,6 @@
 // import Categories from 'components/Categories/Categories';
 // import RegistrationBaner from 'components/RegistrationBaner.js/RregistrationBaner';
+import React from 'react';
 import Header from '../../components/Header/Header';
 import Hero from '../../components/Hero/Hero';
 import {

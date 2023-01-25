@@ -1,13 +1,5 @@
-import {
-  Button,
-  Rectangle,
-  Text,
-  Title,
-  Wrapper,
-  WrapperButton,
-  Сontext,
-} from './Hero.styled';
-// import play from '../../images/hero/sprite.svg';
+import { Button, Text, Title, Wrapper, Сontext } from './Hero.styled';
+import button from '../../images/header/sprite.svg';
 
 const Hero = () => {
   return (
@@ -18,12 +10,12 @@ const Hero = () => {
 
           <Text>We provide world class financial assistance</Text>
 
-          {/* <Button type="button">
-            <svg width="14px" height="18px">
-                <use href={`${play}#play`}></use>
-              </svg>
-            Watch
-          </Button> */}
+          <Button>
+            <svg width="9px" height="18px">
+              <use href={`${button}#button`}></use>
+            </svg>
+            Read More
+          </Button>
         </Сontext>
       </Wrapper>
     </>

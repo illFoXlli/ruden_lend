@@ -58,6 +58,8 @@ export const Text = styled.p`
   line-height: ${p => p.theme.lineHeights.heroText};
 
   text-align: center;
+
+  margin-top: 16px;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -66,33 +68,34 @@ export const Text = styled.p`
 
 export const Button = styled.button`
   display: flex;
-  gap: 15px;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
   align-items: center;
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  padding: 15px 30px;
+  font-size: 18px;
+  line-height: ${p => p.theme.lineHeights.secondary};
+  text-align: center;
+  color: ${props => props.theme.colors.white};
+  padding: 16px 32px;
   border: 0;
 
-  box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
-  border-radius: 100px;
+  border-radius: 5px;
   cursor: pointer;
-  background-image: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  background-color: #28a745;
 
-  transition-property: box-shadow;
+  transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
   :focus,
   :hover {
-    box-shadow: 0px 3px 20px 1px #26fff2;
-    background-image: linear-gradient(316.53deg, #326cff 13.2%, #26fff2 71.54%);
+    opacity: 0.8;
   }
   :active {
-    transition: 100ms cubic-bezier(0.43, 0.21, 0, 1.03);
-    transform: translateY(2px);
+  }
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
   }
 `;
