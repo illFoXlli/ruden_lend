@@ -17,10 +17,7 @@ export const Wrapper = styled.div`
       rgba(0, 0, 0, 0.4)
     ),
     url(${heroM1});
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  ${props => props.theme.retina.double} {
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.4),
@@ -49,10 +46,7 @@ export const Wrapper = styled.div`
         rgba(0, 0, 0, 0.4)
       ),
       url(${heroL1});
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    ${props => props.theme.retina.double} {
       background-image: linear-gradient(
           to right,
           rgba(0, 0, 0, 0.4),
@@ -68,10 +62,7 @@ export const Wrapper = styled.div`
         rgba(0, 0, 0, 0.4)
       ),
       url(${heroX1});
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    ${props => props.theme.retina.double} {
       background-image: linear-gradient(
           to right,
           rgba(0, 0, 0, 0.4),
