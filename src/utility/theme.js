@@ -74,7 +74,7 @@ export const theme = {
     tab: '@media screen and (min-width: 768px)',
     desc: '@media screen and (min-width: 1360px)',
     onlyMob: '@media screen and (max-width: 767px)',
-    onlyTab: '@media screen and (min-width: 768px) and (max-width: 1359hpx)',
+    onlyTab: '@media screen and (min-width: 768px) and (max-width: 1359px)',
   },
   retina: {
     double:
