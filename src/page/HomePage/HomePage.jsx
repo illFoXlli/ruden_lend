@@ -15,7 +15,8 @@ import {
   // SectionTrendingMovies,
   // SectionTrendingTVShows,
 } from './HomePage.styled';
-// import Actors from 'components/Actors/Actors';
+import Blog from '../../components/Blog';
+import BlogBlue from '../../components/BlogBlue';
 // import Baner from 'components/Baner/Baner';
 // import Footter from 'components/Footter/Footter';
 // import TrendingTVShows from 'components/TrendingTVShows';
@@ -30,6 +31,8 @@ const HomePage = () => {
       </SectionHero>
       <Container>
         <Main>
+          <Blog />
+          <BlogBlue />
           {/* <SectionTrendingTVShows>
             <TrendingTVShows>Trending TV Shows</TrendingTVShows>
           </SectionTrendingTVShows>

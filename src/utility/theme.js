@@ -4,6 +4,7 @@ export const theme = {
     white: '#FFFFFF',
     accent: '#28A745',
     main: '#333333',
+    blue: '#0284D0',
 
     background: {
       white: '#FFFFFF',
@@ -13,6 +14,7 @@ export const theme = {
       popup: '',
       content: '#333333',
       accent: '#28A745',
+      blue: '#0284D0',
     },
   },
   space: [0, 8, 12, 16, 20, 32, 40, 50, 80, 110],
@@ -30,6 +32,7 @@ export const theme = {
     ml: '20px',
     l: '24px',
     xl: '26px',
+    xlx: '32px',
     xll: '40px',
     xxl: '48px',
     titleSmall: '32px',
@@ -50,7 +53,7 @@ export const theme = {
     logo: 1.37,
   },
   letterSpacing: {
-    normal: '0.04em',
+    normal: '0.03em',
     logo: '0.07em',
   },
   borders: {
