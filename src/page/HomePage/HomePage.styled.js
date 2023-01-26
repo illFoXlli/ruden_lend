@@ -7,31 +7,60 @@ export const Container = styled.div`
   /* padding-left: 20px;
   padding-right: 20px; */
   width: 320px;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-export const SectionHero = styled.section``;
+export const SectionHero = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-// export const SectionTrendingTVShows = styled.section`
-//   margin-top: 60px;
-// `;
+export const SectionBloge = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-// export const SectionTrendingMovies = styled.section`
-//   margin-top: 60px;
-// `;
+export const SectionCases = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-// export const SectionCategories = styled.section`
-//   margin-top: 108px;
-// `;
+export const SectionBlogeBlue = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-// export const SectionActors = styled.section`
-//   margin-top: 70px;
-// `;
+export const SectionCollbackForm = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
-// export const SectionBaner = styled.section`
-//   margin-top: 100px;
-// `;
+export const SectionFooter = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
 
 // export const SectionRegistrationBaner = styled.section`
 //   margin-top: 121px;
