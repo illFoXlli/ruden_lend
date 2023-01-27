@@ -1,9 +1,11 @@
 import React, { useState, useCallback } from 'react';
-import { render } from 'react-dom';
-import ImageViewer from 'react-simple-image-viewer';
+
 import {
+  Close,
+  ImageViewerNew,
   Img,
   ListItem,
+  Prev,
   Preview,
   Text,
   Title,
@@ -23,6 +25,8 @@ import {
   useIsTablet,
   useIsDesktop,
 } from '../../hooks/uselsMobile';
+import close from '../../images/gallery/close.png';
+import ReactSimpleImageViewer from '../ReactSimpleImageViewer/ReactSimpleImageViewer';
 
 const Cases = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -130,11 +134,11 @@ const Cases = () => {
                 </li>
               ))}
             {useIsMobile() && isViewerOpen && (
-              <ImageViewer
+              <ReactSimpleImageViewer
                 src={imgDataMobArray}
                 currentIndex={currentImage}
-                disableScroll={false}
-                closeOnClickOutside={true}
+                disableScroll={true}
+                closeOnClickOutside={false}
                 onClose={closeImageViewer}
               />
             )}
@@ -178,12 +182,13 @@ const Cases = () => {
                 </li>
               ))}
             {useIsTablet() && isViewerOpen && (
-              <ImageViewer
+              <ReactSimpleImageViewer
                 src={imgDataDesArray}
                 currentIndex={currentImage}
                 disableScroll={false}
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
+                backgroundStyle={{ background: 'rgba(0, 0, 0, 0.4)' }}
               />
             )}
             {useIsDesktop() &&
@@ -226,12 +231,13 @@ const Cases = () => {
                 </li>
               ))}
             {useIsDesktop() && isViewerOpen && (
-              <ImageViewer
+              <ReactSimpleImageViewer
                 src={imgDataDesArray}
                 currentIndex={currentImage}
                 disableScroll={false}
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
+                backgroundStyle={{ background: 'rgba(0, 0, 0, 0.4)' }}
               />
             )}
           </ListItem>
