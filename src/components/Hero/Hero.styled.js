@@ -9,7 +9,6 @@ import heroX2 from '../../images/hero/RectangleXXX2x.png';
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  /* padding-left: -20px; */
 
   background-image: linear-gradient(
       to right,

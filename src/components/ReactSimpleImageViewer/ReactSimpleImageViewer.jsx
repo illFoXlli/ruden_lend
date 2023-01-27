@@ -1,4 +1,4 @@
-import React, { CSSProperties, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import {
   Content,
@@ -19,7 +19,7 @@ const ReactSimpleImageViewer = props => {
       if (nextIndex < 0) nextIndex = props.src.length - 1;
       setCurrentIndex(nextIndex);
     },
-    [currentIndex]
+    [currentIndex, props.src.length]
   );
 
   const handleClick = useCallback(
@@ -38,7 +38,7 @@ const ReactSimpleImageViewer = props => {
         props.onClose?.();
       }
     },
-    [props.onClose]
+    [props]
   );
 
   const handleKeyDown = useCallback(
@@ -55,7 +55,7 @@ const ReactSimpleImageViewer = props => {
         changeImage(1);
       }
     },
-    [props.onClose, changeImage]
+    [props, changeImage]
   );
 
   const handleWheel = useCallback(
@@ -83,7 +83,7 @@ const ReactSimpleImageViewer = props => {
         document.removeEventListener('wheel', handleWheel);
       }
     };
-  }, [handleKeyDown, handleWheel]);
+  }, [handleKeyDown, handleWheel, props.disableScroll]);
 
   return (
     <Wrapper

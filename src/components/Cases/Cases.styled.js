@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import prev from '../../images/gallery/prev.png';
-import close from '../../images/gallery/close.png';
-import ImageViewer from 'react-simple-image-viewer';
 
 export const Wrapper = styled.div`
   padding-left: 20px;
@@ -89,43 +86,6 @@ export const Text = styled.p`
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 24px;
   margin-bottom: 31px;
-  ${props => props.theme.breakpoints.tab} {
-  }
-  ${props => props.theme.breakpoints.desc} {
-  }
-`;
-
-export const Prev = styled.div`
-  width: 50px;
-  height: 50px;
-
-  background-image: url(${prev});
-  background-color: white;
-
-  ${props => props.theme.breakpoints.tab} {
-  }
-  ${props => props.theme.breakpoints.desc} {
-  }
-`;
-
-export const Close = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-top: 200%;
-  /* background-image: url(${close}); */
-  background-color: white;
-
-  ${props => props.theme.breakpoints.tab} {
-  }
-  ${props => props.theme.breakpoints.desc} {
-  }
-`;
-
-export const ImageViewerNew = styled(ImageViewer)`
-  position: relative;
-  z-index: 1000;
-  background: green;
-
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

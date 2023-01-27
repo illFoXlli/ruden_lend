@@ -1,11 +1,8 @@
 import React, { useState, useCallback } from 'react';
 
 import {
-  Close,
-  ImageViewerNew,
   Img,
   ListItem,
-  Prev,
   Preview,
   Text,
   Title,
@@ -17,7 +14,6 @@ import {
   imgDataTab,
   imgDataDes,
   imgDataMobArray,
-  imgDataTabArray,
   imgDataDesArray,
 } from './ImgData';
 import {
@@ -25,7 +21,6 @@ import {
   useIsTablet,
   useIsDesktop,
 } from '../../hooks/uselsMobile';
-import close from '../../images/gallery/close.png';
 import ReactSimpleImageViewer from '../ReactSimpleImageViewer/ReactSimpleImageViewer';
 
 const Cases = () => {
@@ -55,41 +50,6 @@ const Cases = () => {
         </WrapperContent>
         <div>
           <ListItem>
-            {/* <picture>
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 1360px)"
-              srcSet={`
-                    ${people1XXX1x} 1x,
-                    ${people1XXX2x} 2x
-                  `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 768px)"
-              srcSet={`
-                    ${people1LLL1x} 1x,
-                    ${people1LLL2x} 2x
-                  `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (max-width: 767px)"
-              srcSet={`
-                    ${people1MMM1x} 1x,
-                    ${people1MMM2x} 2x
-                  `}
-            />
-            <Img
-              type="image/web"
-              srcSet={`
-            ${people1Web2x} 2x,
-            ${people1Web1x} 1x,
-            `}
-              src={people1Web1x}
-              alt="фото"
-            />
-          </picture> */}
             {useIsMobile() &&
               imgDataMob.map((src, index) => (
                 <li kye={index}>
