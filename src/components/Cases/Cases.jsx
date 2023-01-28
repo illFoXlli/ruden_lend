@@ -41,7 +41,7 @@ const Cases = () => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper currentImage={currentImage}>
         <WrapperContent>
           <Preview>This is what we do</Preview>
           <Title>Business Cases</Title>
@@ -145,7 +145,7 @@ const Cases = () => {
               <ReactSimpleImageViewer
                 src={imgDataDesArray}
                 currentIndex={currentImage}
-                disableScroll={false}
+                disableScroll={true}
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
                 backgroundStyle={{ background: 'rgba(0, 0, 0, 0.4)' }}
@@ -193,7 +193,7 @@ const Cases = () => {
               <ReactSimpleImageViewer
                 src={imgDataDesArray}
                 currentIndex={currentImage}
-                disableScroll={false}
+                disableScroll={true}
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
                 backgroundStyle={{ background: 'rgba(0, 0, 0, 0.4)' }}

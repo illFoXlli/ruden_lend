@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  body {
+    overflow: ${({ currentImage }) => (currentImage ? 'hidden' : 'none')};
+  }
   padding-bottom: 40px;
   padding-top: 56px;
 
