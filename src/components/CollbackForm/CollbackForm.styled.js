@@ -68,6 +68,7 @@ export const Button = styled.button`
   font-weight: ${props => props.theme.fontWeights.normal};
   text-align: center;
   color: ${props => props.theme.colors.white};
+  padding: 16px 56px;
   border: 0;
   font-family: 'Open Sans';
   font-style: normal;
@@ -75,11 +76,9 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   background-color: #28a745;
-
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
-
   :focus,
   :hover {
     opacity: 0.8;
@@ -96,13 +95,15 @@ export const Title = styled.h2`
   margin-left: auto;
   margin-right: auto;
 
-  font-size: 33px;
-  line-height: 48px;
+  font-size: ${p => p.theme.fontSizes.xlx};
+  line-height: ${p => p.theme.lineHeights.secondary};
+  font-weight: ${props => props.theme.fontWeights.normal};
   margin-bottom: 69px;
 
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.xll};
     margin-left: 0;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   ${props => props.theme.breakpoints.desc} {
     margin-bottom: 0;
@@ -125,8 +126,9 @@ export const Input = styled.input`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.secondary};
+  font-weight: ${props => props.theme.fontWeights.normal};
   width: 100%;
   height: 56px;
   background: #ffffff;
@@ -141,6 +143,7 @@ export const Input = styled.input`
     top: -20px;
   }
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ms};
   }
   ${props => props.theme.breakpoints.desc} {
   }

@@ -13,9 +13,7 @@ import {
   Div,
 } from './CollbackForm.styled';
 import icons from '../../images/sprite.svg';
-
 import { useFormik } from 'formik';
-
 import formSmX1 from '../../images/form/form-sm@-x1.png';
 import formSmX2 from '../../images/form/form-sm@-x2.png';
 import formMdX1 from '../../images/form/form-md@-x1.png';
@@ -24,6 +22,7 @@ import formLgX1 from '../../images/form/form-lg@-x1.png';
 import formLgX2 from '../../images/form/form-lg@-x2.png';
 import formWebX1 from '../../images/form/contact.webp';
 import formWebX2 from '../../images/form/contact@2x.webp';
+
 const CollbackForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -59,6 +58,14 @@ const CollbackForm = () => {
             srcSet={`
                     ${formMdX1} 1x,
                     ${formMdX2} 2x
+                  `}
+          />
+          <source
+            type="image/jpeg"
+            media="screen and (min-width: 768px)"
+            srcSet={`
+                    ${formLgX1} 1x,
+                    ${formLgX2} 2x
                   `}
           />
           <source

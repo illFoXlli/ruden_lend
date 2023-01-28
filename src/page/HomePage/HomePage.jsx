@@ -17,19 +17,15 @@ import BlogBlue from '../../components/BlogBlue';
 import Cases from '../../components/Cases';
 import OurTeam from '../../components/OurTeam';
 import Footer from '../../components/Footer';
-import { DivWrapper } from '../../components/Cases/Cases.styled';
-import CollbackForm from '../../components/CollbackFormOLD/CollbackForm';
+import CollbackForm from '../../components/CollbackForm/CollbackForm';
+
 const HomePage = () => {
   return (
-    <DivWrapper>
+    <>
       <Header />
-
       <SectionHero id="home">
-        {/* <Container> */}
         <Hero />
-        {/* </Container> */}
       </SectionHero>
-
       <Main>
         <SectionBloge id="about">
           <Blog />
@@ -52,7 +48,7 @@ const HomePage = () => {
       <SectionFooter id="contact">
         <Footer />
       </SectionFooter>
-    </DivWrapper>
+    </>
   );
 };
 

@@ -50,13 +50,6 @@ const OurTeam = () => {
                 <ItemImg key={name}>
                   <picture>
                     <source
-                      srcSet={`
-                    ${imgWeb1x} 1x,
-                    ${imgWeb2x} 2x
-                  `}
-                      type="image/webp"
-                    />
-                    <source
                       type="image/jpeg"
                       media="screen and (min-width: 1360px)"
                       srcSet={`
@@ -81,7 +74,15 @@ const OurTeam = () => {
                     ${imgSm2x} 2x
                   `}
                     />
-                    <Img src={imgWeb1x} alt="фото" />
+                    <Img
+                      type="image/web"
+                      srcSet={`
+                       ${imgWeb1x} 2x,
+                       ${imgWeb2x} 1x,
+                       `}
+                      src={imgWeb1x}
+                      alt="фото"
+                    />
                   </picture>
                   <Div>
                     <List>

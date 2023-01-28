@@ -185,11 +185,6 @@ export const Div = styled.div`
   height: 186px;
   display: block;
   opacity: 0;
-  /* background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)
-  ); */
   transition-property: all;
   transition-duration: 960ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);

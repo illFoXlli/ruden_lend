@@ -20,9 +20,6 @@ export const Wrapper = styled.div`
   ${props => props.theme.breakpoints.desc} {
     padding: 0px 80px 0px 80px;
   }
-  /* @media (max-width: 900px) {
-    padding: 0;
-  } */
 `;
 
 export const SpanClose = styled.span`
@@ -82,9 +79,7 @@ export const NavigationPrev = styled.span`
   :hover {
     opacity: 1;
   }
-  /* @media (hover: none) {
-    opacity: 0.2; */
-  /* } */
+
   ${props => props.theme.breakpoints.tab} {
     opacity: 0.2;
     transform: translate(-100%, -50%);
@@ -123,9 +118,7 @@ export const NavigationNext = styled.span`
   :hover {
     opacity: 1;
   }
-  /* @media (hover: none) {
-    opacity: 0.2;
-  } */
+
   ${props => props.theme.breakpoints.tab} {
     opacity: 0.2;
     transform: translate(100%, -50%);
@@ -140,8 +133,6 @@ export const NavigationNext = styled.span`
 export const Content = styled.div`
   margin: auto;
   padding: 0;
-  /* width: 90%; */
-
   text-align: center;
   ${props => props.theme.breakpoints.tab} {
   }
@@ -150,7 +141,6 @@ export const Content = styled.div`
 `;
 
 export const Slide = styled.div`
-  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;

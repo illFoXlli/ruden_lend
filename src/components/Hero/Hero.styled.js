@@ -27,8 +27,6 @@ export const Wrapper = styled.div`
       url(${heroM2});
   }
   padding-top: 100px;
-  /* height: 533px;
-  width: 320px; */
   margin-left: auto;
   margin-right: auto;
   margin-top: -121px;
@@ -43,7 +41,6 @@ export const Wrapper = styled.div`
     background-size: cover;
     background-repeat: round;
     margin-top: -110px;
-    /* max-width: 768px; */
     */ ${props => props.theme.retina.double} {
       background-image: linear-gradient(
           to right,

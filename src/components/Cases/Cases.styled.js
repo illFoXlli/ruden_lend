@@ -1,22 +1,6 @@
 import styled from 'styled-components';
 
-export const DivWrapper = styled.div`
-  /* height: 100vh; */
-  /* overflow-y: hidden; */
-  ${props => props.theme.breakpoints.tab} {
-  }
-  ${props => props.theme.breakpoints.desc} {
-  }
-`;
-
 export const Wrapper = styled.div`
-  /* ${DivWrapper} {
-    /* overflow-y: ${({ currentImage }) =>
-    currentImage ? 'hidden' : 'none'}; */
-  overflow-y: hidden;
-  /* height: 50vh; */
-  /* }  */
-
   padding-bottom: 40px;
   padding-top: 56px;
 
@@ -54,7 +38,6 @@ export const ListItem = styled.ul`
 
 export const Item = styled.li`
   flex-basis: calc((100% - 18 * 2) / 3);
-  /* calc((100% - 18 * 3- 1) / 4); */
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
