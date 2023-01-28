@@ -25,8 +25,12 @@ export const Wrapper = styled.div`
 export const SpanClose = styled.span`
   color: #fff;
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-100%, 100%);
+  display: block;
+  width: 40px;
+  height: 40px;
   font-size: 40px;
   font-weight: bold;
   /* opacity: 0.2; */
@@ -35,16 +39,23 @@ export const SpanClose = styled.span`
     opacity: 1;
   }
   ${props => props.theme.breakpoints.tab} {
+    opacity: 0.2;
+    cursor: pointer;
+    :hover {
+      opacity: 1;
+    }
   }
   ${props => props.theme.breakpoints.desc} {
   }
 `;
 
 export const NavigationPrev = styled.span`
+  position: absolute;
+  top: 50%;
+  transform: translate(10%, -50%);
   height: 80%;
   color: white;
   cursor: pointer;
-  position: absolute;
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
@@ -69,10 +80,13 @@ export const NavigationPrev = styled.span`
 `;
 
 export const NavigationNext = styled.span`
+  position: absolute;
+  top: 50%;
+  transform: translate(-10%, -50%);
   height: 80%;
   color: white;
   cursor: pointer;
-  position: absolute;
+
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
@@ -121,12 +135,30 @@ export const Slide = styled.div`
 `;
 
 export const Img = styled.img`
-  max-height: 100%;
-  max-width: 100%;
+  /* height: 100%; */
+
   user-select: none;
   border: 9px solid #fff;
   border-radius: 4px;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
+  ${props => props.theme.breakpoints.tab} {
+    width: 506px;
+  }
+
+  ${props => props.theme.breakpoints.desc} {
+    height: 603px;
+    width: 900px;
+  }
+`;
+
+export const Div = styled.div`
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

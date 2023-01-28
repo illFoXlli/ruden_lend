@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import {
   Content,
+  Div,
   Img,
   NavigationNext,
   NavigationPrev,
@@ -92,27 +94,42 @@ const ReactSimpleImageViewer = props => {
       onClick={handleClick}
       style={props.backgroundStyle}
     >
-      <SpanClose onClick={() => props.onClose?.()}>
-        {props.closeComponent || '×'}
-      </SpanClose>
+      <Div>
+        <SpanClose onClick={() => props.onClose?.()}>
+          <FiX />
+        </SpanClose>
 
-      {props.src.length > 1 && (
-        <NavigationPrev onClick={() => changeImage(-1)}>
-          {props.leftArrowComponent || '❮'}
-        </NavigationPrev>
-      )}
+        {props.src.length > 1 && (
+          <NavigationPrev onClick={() => changeImage(-1)}>
+            <FiChevronLeft />
+          </NavigationPrev>
+        )}
 
-      {props.src.length > 1 && (
-        <NavigationNext onClick={() => changeImage(1)}>
-          {props.rightArrowComponent || '❯'}
-        </NavigationNext>
-      )}
+        {props.src.length > 1 && (
+          <NavigationNext onClick={() => changeImage(1)}>
+            <FiChevronRight />
+          </NavigationNext>
+        )}
 
-      <Content onClick={handleClick}>
-        <Slide>
-          <Img src={props.src[currentIndex]} alt="" />
-        </Slide>
-      </Content>
+        <Content onClick={handleClick}>
+          <Slide>{<Img src={props.src[currentIndex]} alt="" />}</Slide>
+          <SpanClose onClick={() => props.onClose?.()}>
+            <FiX />
+          </SpanClose>
+
+          {props.src.length > 1 && (
+            <NavigationPrev onClick={() => changeImage(-1)}>
+              <FiChevronLeft />
+            </NavigationPrev>
+          )}
+
+          {props.src.length > 1 && (
+            <NavigationNext onClick={() => changeImage(1)}>
+              <FiChevronRight />
+            </NavigationNext>
+          )}
+        </Content>
+      </Div>
     </Wrapper>
   );
 };

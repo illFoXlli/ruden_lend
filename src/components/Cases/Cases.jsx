@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import {
   Img,
+  Item,
   ListItem,
   Preview,
   Text,
@@ -52,7 +53,7 @@ const Cases = () => {
           <ListItem>
             {useIsMobile() &&
               imgDataMob.map((src, index) => (
-                <li kye={index}>
+                <Item kye={index}>
                   <picture>
                     <source
                       type="image/jpeg"
@@ -87,11 +88,10 @@ const Cases = () => {
                       onClick={() => openImageViewer(index)}
                       width="300"
                       key={index}
-                      style={{ margin: '2px' }}
                       alt=""
                     />
                   </picture>
-                </li>
+                </Item>
               ))}
             {useIsMobile() && isViewerOpen && (
               <ReactSimpleImageViewer
@@ -104,7 +104,7 @@ const Cases = () => {
             )}
             {useIsTablet() &&
               imgDataTab.map((src, index) => (
-                <li kye={index}>
+                <Item kye={index}>
                   <picture>
                     <source
                       type="image/jpeg"
@@ -135,11 +135,10 @@ const Cases = () => {
                       onClick={() => openImageViewer(index)}
                       width="300"
                       key={index}
-                      style={{ margin: '2px' }}
                       alt=""
                     />
                   </picture>
-                </li>
+                </Item>
               ))}
             {useIsTablet() && isViewerOpen && (
               <ReactSimpleImageViewer
@@ -153,7 +152,7 @@ const Cases = () => {
             )}
             {useIsDesktop() &&
               imgDataDes.map((src, index) => (
-                <li kye={index}>
+                <Item kye={index}>
                   <picture>
                     <source
                       type="image/jpeg"
@@ -184,11 +183,10 @@ const Cases = () => {
                       onClick={() => openImageViewer(index)}
                       width="300"
                       key={index}
-                      style={{ margin: '2px' }}
                       alt=""
                     />
                   </picture>
-                </li>
+                </Item>
               ))}
             {useIsDesktop() && isViewerOpen && (
               <ReactSimpleImageViewer

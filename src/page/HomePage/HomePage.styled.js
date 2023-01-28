@@ -4,12 +4,19 @@ export const Container = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+
   ${props => props.theme.breakpoints.tab} {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   ${props => props.theme.breakpoints.desc} {
+    max-width: 1360px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 `;
 
@@ -41,6 +48,13 @@ export const SectionCases = styled.section`
   }
 `;
 
+export const SectionOurTeam = styled.section`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
 export const SectionBlogeBlue = styled.section`
   ${props => props.theme.breakpoints.tab} {
   }
@@ -61,9 +75,3 @@ export const SectionFooter = styled.section`
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-
-// export const SectionRegistrationBaner = styled.section`
-//   margin-top: 121px;
-//   margin-bottom: 121px;
-// `;
-// export const SectionFooter = styled.footer``;

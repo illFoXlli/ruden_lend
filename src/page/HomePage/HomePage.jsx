@@ -10,6 +10,7 @@ import {
   SectionCollbackForm,
   SectionFooter,
   SectionHero,
+  SectionOurTeam,
 } from './HomePage.styled';
 import Blog from '../../components/Blog';
 import BlogBlue from '../../components/BlogBlue';
@@ -21,29 +22,41 @@ const HomePage = () => {
   return (
     <>
       <Header />
+
       <SectionHero id="home">
+        {/* <Container> */}
         <Hero />
+        {/* </Container> */}
       </SectionHero>
-      <Container>
-        <Main>
-          <SectionBloge id="about">
-            <Blog />
-          </SectionBloge>
-          <SectionCases id="cases">
+
+      <Main>
+        <SectionBloge id="about">
+          <Blog />
+        </SectionBloge>
+        <SectionCases id="cases">
+          <Container>
             <Cases />
-          </SectionCases>
-          <SectionBlogeBlue id="blog">
-            <BlogBlue />
-          </SectionBlogeBlue>
-          <OurTeam />
-          <SectionCollbackForm>
+          </Container>
+        </SectionCases>
+        <SectionBlogeBlue id="blog">
+          <BlogBlue />
+        </SectionBlogeBlue>
+        {/* <SectionOurTeam id="about">
+          <Container>
+            <OurTeam />
+          </Container>
+        </SectionOurTeam>
+        <SectionCollbackForm>
+          <Container>
             <CollbackForm />
-          </SectionCollbackForm>
-        </Main>
-        <SectionFooter>
+          </Container>
+        </SectionCollbackForm> */}
+      </Main>
+      {/* <SectionFooter id="contact">
+        <Container>
           <Footer />
-        </SectionFooter>
-      </Container>
+        </Container>
+      </SectionFooter> */}
     </>
   );
 };

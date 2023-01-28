@@ -5,8 +5,6 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const NavStyled = styled.nav`
-  padding-bottom: 16px;
-
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -21,8 +19,10 @@ export const ListNav = styled.ul`
   list-style: none;
   gap: 10px;
   ${props => props.theme.breakpoints.tab} {
+    gap: 20px;
   }
   ${props => props.theme.breakpoints.desc} {
+    gap: 40px;
   }
 `;
 
@@ -89,6 +89,7 @@ export const LinkItemNav = styled(Link)`
     }
   }
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${props => props.theme.fontSizes.ms};
   }
   ${props => props.theme.breakpoints.desc} {
   }
