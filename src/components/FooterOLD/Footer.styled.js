@@ -4,12 +4,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: #333333;
-  margin-left: auto;
-  margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
-    max-width: 1360px;
   }
 `;
 

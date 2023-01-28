@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  body {
-    overflow: ${({ currentImage }) => (currentImage ? 'hidden' : 'none')};
+export const DivWrapper = styled.div`
+  /* height: 100vh; */
+  /* overflow-y: hidden; */
+  ${props => props.theme.breakpoints.tab} {
   }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
+export const Wrapper = styled.div`
+  /* ${DivWrapper} {
+    /* overflow-y: ${({ currentImage }) =>
+    currentImage ? 'hidden' : 'none'}; */
+  overflow-y: hidden;
+  /* height: 50vh; */
+  /* }  */
+
   padding-bottom: 40px;
   padding-top: 56px;
 

@@ -16,11 +16,12 @@ import Blog from '../../components/Blog';
 import BlogBlue from '../../components/BlogBlue';
 import Cases from '../../components/Cases';
 import OurTeam from '../../components/OurTeam';
-import CollbackForm from '../../components/CollbackForm';
 import Footer from '../../components/Footer';
+import { DivWrapper } from '../../components/Cases/Cases.styled';
+import CollbackForm from '../../components/CollbackFormOLD/CollbackForm';
 const HomePage = () => {
   return (
-    <>
+    <DivWrapper>
       <Header />
 
       <SectionHero id="home">
@@ -41,23 +42,17 @@ const HomePage = () => {
         <SectionBlogeBlue id="blog">
           <BlogBlue />
         </SectionBlogeBlue>
-        {/* <SectionOurTeam id="about">
-          <Container>
-            <OurTeam />
-          </Container>
+        <SectionOurTeam id="about">
+          <OurTeam />
         </SectionOurTeam>
         <SectionCollbackForm>
-          <Container>
-            <CollbackForm />
-          </Container>
-        </SectionCollbackForm> */}
+          <CollbackForm />
+        </SectionCollbackForm>
       </Main>
-      {/* <SectionFooter id="contact">
-        <Container>
-          <Footer />
-        </Container>
-      </SectionFooter> */}
-    </>
+      <SectionFooter id="contact">
+        <Footer />
+      </SectionFooter>
+    </DivWrapper>
   );
 };
 

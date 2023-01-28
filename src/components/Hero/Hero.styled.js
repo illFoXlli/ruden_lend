@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
   width: 320px; */
   margin-left: auto;
   margin-right: auto;
-  margin-top: -116px;
+  margin-top: -121px;
 
   ${props => props.theme.breakpoints.tab} {
     background-image: linear-gradient(

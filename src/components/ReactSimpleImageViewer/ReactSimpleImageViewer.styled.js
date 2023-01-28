@@ -36,8 +36,12 @@ export const SpanClose = styled.span`
   height: 40px;
   font-size: 40px;
   font-weight: bold;
-  /* opacity: 0.2; */
+  opacity: 0.2;
   cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+
   :hover {
     opacity: 1;
   }
@@ -64,19 +68,29 @@ export const NavigationPrev = styled.span`
   font-weight: bold;
   display: flex;
   align-items: center;
-  opacity: 0.2;
+  opacity: 0;
   padding: 0 15px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   left: 0;
+
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+
   :hover {
     opacity: 1;
   }
-  @media (hover: none) {
-    opacity: 0.2;
-  }
+  /* @media (hover: none) {
+    opacity: 0.2; */
+  /* } */
   ${props => props.theme.breakpoints.tab} {
+    opacity: 0.2;
+    transform: translate(-100%, -50%);
+    :hover {
+      opacity: 1;
+    }
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -95,19 +109,29 @@ export const NavigationNext = styled.span`
   font-weight: bold;
   display: flex;
   align-items: center;
-  opacity: 0.2;
+  opacity: 0;
   padding: 0 15px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   right: 0;
+
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+
   :hover {
     opacity: 1;
   }
-  @media (hover: none) {
+  /* @media (hover: none) {
     opacity: 0.2;
-  }
+  } */
   ${props => props.theme.breakpoints.tab} {
+    opacity: 0.2;
+    transform: translate(100%, -50%);
+    :hover {
+      opacity: 1;
+    }
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -140,7 +164,7 @@ export const Img = styled.img`
   width: calc(${props => props.width}px - 20px);
 
   user-select: none;
-  border: 9px solid #fff;
+  border: 5px solid #fff;
   border-radius: 4px;
   transition-property: opacity;
   transition-duration: 1000ms;
@@ -161,7 +185,11 @@ export const Div = styled.div`
   margin-left: auto;
   margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
+    border: 7px solid #fff;
+    border-radius: 4px;
   }
   ${props => props.theme.breakpoints.desc} {
+    border: 9px solid #fff;
+    border-radius: 4px;
   }
 `;

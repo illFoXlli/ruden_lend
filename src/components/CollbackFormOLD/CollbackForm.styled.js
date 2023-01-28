@@ -1,49 +1,57 @@
 import styled from 'styled-components';
-
+import formSmX1 from '../../images/form/form-sm@-x1.png';
+import formSmX2 from '../../images/form/form-sm@-x2.png';
+import formMdX1 from '../../images/form/form-md@-x1.png';
+import formMdX2 from '../../images/form/form-md@-x2.png';
+import formLgX1 from '../../images/form/form-lg@-x1.png';
+import formLgX2 from '../../images/form/form-lg@-x2.png';
 export const Wrapper = styled.div`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   background: #f4f4f4;
-
   ${props => props.theme.breakpoints.tab} {
-    display: flex;
-    margin-bottom: 40px;
+    flex-direction: row;
   }
   ${props => props.theme.breakpoints.desc} {
-    max-width: 1360px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
   }
 `;
-export const Div = styled.div`
-  ${props => props.theme.breakpoints.tab} {
-    max-width: 48%;
-    flex-basis: 100%;
-  }
-  ${props => props.theme.breakpoints.desc} {
-    max-width: 670px;
-  }
-`;
-export const Img = styled.img`
-  width: 100%;
 
+export const Img = styled.div`
+  background-image: url(${formSmX1});
+  background-position: center;
+  width: 320px;
+  height: 220px;
+
+  margin-bottom: 51px;
+  ${props => props.theme.retina.double} {
+    background-image: url(${formSmX2});
+  }
   ${props => props.theme.breakpoints.tab} {
-    object-fit: cover;
-    height: 100%;
+    width: 368px;
+    height: 354px;
+    background: url(${formMdX1});
+    ${props => props.theme.retina.double} {
+      background-image: url(${formMdX2});
+    }
   }
   ${props => props.theme.breakpoints.desc} {
+    width: 670px;
+    height: 454px;
+    background: url(${formLgX1});
+    ${props => props.theme.retina.double} {
+      background-image: url(${formLgX2});
+    }
   }
 `;
 
 export const WrapperForm = styled.div`
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 51px;
   ${props => props.theme.breakpoints.tab} {
-    flex-basis: 100%;
-    margin-top: 32px;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-top: 56px;
   }
 `;
 
@@ -51,7 +59,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -68,6 +76,7 @@ export const Button = styled.button`
   font-weight: ${props => props.theme.fontWeights.normal};
   text-align: center;
   color: ${props => props.theme.colors.white};
+  padding: 16px 56px;
   border: 0;
   font-family: 'Open Sans';
   font-style: normal;
@@ -92,20 +101,13 @@ export const Button = styled.button`
   }
 `;
 
-export const Title = styled.h2`
-  margin-left: auto;
-  margin-right: auto;
-
-  font-size: 33px;
+export const Title = styled.h3`
+  font-size: 32px;
   line-height: 48px;
   margin-bottom: 69px;
-
   ${props => props.theme.breakpoints.tab} {
-    margin-left: 0;
-    margin-bottom: 4px;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-bottom: 0;
   }
 `;
 

@@ -44,6 +44,7 @@ export const WrapperContent = styled.div`
 `;
 
 export const Img = styled.img`
+  display: block;
   width: 100%;
   ${props => props.theme.breakpoints.tab} {
     height: 100%;
