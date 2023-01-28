@@ -26,9 +26,11 @@ export const WrapperContent = styled.div`
 export const ListItem = styled.ul`
   display: flex;
   gap: 17px;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   ${props => props.theme.breakpoints.tab} {
+    flex-direction: initial;
+    flex-wrap: wrap;
   }
   ${props => props.theme.breakpoints.desc} {
   }

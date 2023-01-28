@@ -15,11 +15,12 @@ export const Wrapper = styled.div`
 
   ${props => props.theme.breakpoints.tab} {
   }
+  padding: 0px 10px 0px 10px;
   ${props => props.theme.breakpoints.desc} {
   }
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     padding: 0;
-  }
+  } */
 `;
 
 export const SpanClose = styled.span`
@@ -113,9 +114,8 @@ export const NavigationNext = styled.span`
 export const Content = styled.div`
   margin: auto;
   padding: 0;
-  width: 90%;
-  height: 100%;
-  max-height: 100%;
+  /* width: 90%; */
+
   text-align: center;
   ${props => props.theme.breakpoints.tab} {
   }
@@ -124,7 +124,7 @@ export const Content = styled.div`
 `;
 
 export const Slide = styled.div`
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +135,7 @@ export const Slide = styled.div`
 `;
 
 export const Img = styled.img`
-  /* height: 100%; */
+  width: calc(${props => props.width}px - 20px);
 
   user-select: none;
   border: 9px solid #fff;
@@ -145,12 +145,12 @@ export const Img = styled.img`
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
   ${props => props.theme.breakpoints.tab} {
-    width: 506px;
+    width: calc(${props => props.width}px - 120px);
   }
 
   ${props => props.theme.breakpoints.desc} {
-    height: 603px;
-    width: 900px;
+    /* height: 603px;
+    width: 900px; */
   }
 `;
 

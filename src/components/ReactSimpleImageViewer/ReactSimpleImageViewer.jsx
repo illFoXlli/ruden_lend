@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useState } from 'react';
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   Content,
@@ -14,6 +16,7 @@ import {
 
 const ReactSimpleImageViewer = props => {
   const [currentIndex, setCurrentIndex] = useState(props.currentIndex ?? 0);
+  const [width, setWidth] = useState(window.innerWidth);
 
   const changeImage = useCallback(
     delta => {
@@ -87,6 +90,17 @@ const ReactSimpleImageViewer = props => {
     };
   }, [handleKeyDown, handleWheel, props.disableScroll]);
 
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
+    return () => {
+      window.removeEventListener('resize', () => {
+        setWidth(window.innerWidth);
+      });
+    };
+  }, [width]);
+  console.log(width);
   return (
     <Wrapper
       id="ReactSimpleImageViewer"
@@ -95,24 +109,10 @@ const ReactSimpleImageViewer = props => {
       style={props.backgroundStyle}
     >
       <Div>
-        <SpanClose onClick={() => props.onClose?.()}>
-          <FiX />
-        </SpanClose>
-
-        {props.src.length > 1 && (
-          <NavigationPrev onClick={() => changeImage(-1)}>
-            <FiChevronLeft />
-          </NavigationPrev>
-        )}
-
-        {props.src.length > 1 && (
-          <NavigationNext onClick={() => changeImage(1)}>
-            <FiChevronRight />
-          </NavigationNext>
-        )}
-
         <Content onClick={handleClick}>
-          <Slide>{<Img src={props.src[currentIndex]} alt="" />}</Slide>
+          <Slide>
+            {<Img src={props.src[currentIndex]} width={width} alt="" />}
+          </Slide>
           <SpanClose onClick={() => props.onClose?.()}>
             <FiX />
           </SpanClose>

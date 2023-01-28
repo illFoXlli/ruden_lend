@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   Img,
@@ -53,7 +54,7 @@ const Cases = () => {
           <ListItem>
             {useIsMobile() &&
               imgDataMob.map((src, index) => (
-                <Item kye={index}>
+                <Item key={uuidv4()}>
                   <picture>
                     <source
                       type="image/jpeg"
@@ -104,7 +105,7 @@ const Cases = () => {
             )}
             {useIsTablet() &&
               imgDataTab.map((src, index) => (
-                <Item kye={index}>
+                <Item key={uuidv4()}>
                   <picture>
                     <source
                       type="image/jpeg"
@@ -152,7 +153,7 @@ const Cases = () => {
             )}
             {useIsDesktop() &&
               imgDataDes.map((src, index) => (
-                <Item kye={index}>
+                <Item key={uuidv4()}>
                   <picture>
                     <source
                       type="image/jpeg"
