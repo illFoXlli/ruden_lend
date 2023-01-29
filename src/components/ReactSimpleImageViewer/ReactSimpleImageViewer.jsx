@@ -98,7 +98,7 @@ const ReactSimpleImageViewer = props => {
       });
     };
   }, [width]);
-
+  console.log(props.src[currentIndex]);
   return (
     <Wrapper
       id="ReactSimpleImageViewer"

@@ -44,7 +44,8 @@ export const SpanClose = styled.span`
     opacity: 1;
   }
   ${props => props.theme.breakpoints.tab} {
-    opacity: 0.2;
+    opacity: 0.5;
+    transform: translate(-100%, 120%);
     cursor: pointer;
     :hover {
       opacity: 1;
@@ -83,7 +84,9 @@ export const NavigationPrev = styled.span`
 
   ${props => props.theme.breakpoints.tab} {
     opacity: 0.2;
-    transform: translate(-100%, -50%);
+    transform: translate(-90%, -50%);
+    font-size: 100px;
+    line-height: 100px;
     :hover {
       opacity: 1;
     }
@@ -102,6 +105,7 @@ export const NavigationNext = styled.span`
 
   font-size: 60px;
   line-height: 60px;
+
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -122,7 +126,9 @@ export const NavigationNext = styled.span`
 
   ${props => props.theme.breakpoints.tab} {
     opacity: 0.2;
-    transform: translate(100%, -50%);
+    transform: translate(90%, -50%);
+    font-size: 100px;
+    line-height: 100px;
     :hover {
       opacity: 1;
     }
