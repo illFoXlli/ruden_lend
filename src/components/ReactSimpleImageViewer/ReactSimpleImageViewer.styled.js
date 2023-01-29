@@ -33,8 +33,9 @@ export const SpanClose = styled.span`
   height: 40px;
   font-size: 40px;
   font-weight: bold;
-  opacity: 0.2;
+  opacity: 0.9;
   cursor: pointer;
+
   transition-property: opacity;
   transition-duration: 1000ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);

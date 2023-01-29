@@ -44,8 +44,8 @@ const OurTeam = () => {
                 imgWeb2x,
                 imgMd1x,
                 imgMd2x,
-                imglg1x,
-                imglg2x,
+                imgLg1x,
+                imgLg2x,
               }) => (
                 <ItemImg key={name}>
                   <picture>
@@ -53,8 +53,8 @@ const OurTeam = () => {
                       type="image/jpeg"
                       media="screen and (min-width: 1360px)"
                       srcSet={`
-                    ${imglg1x} 1x,
-                    ${imglg2x} 2x
+                    ${imgLg1x} 1x,
+                    ${imgLg2x} 2x
                   `}
                     />
 

@@ -37,14 +37,6 @@ const CollbackForm = () => {
       <Div>
         <picture>
           <source
-            media="screen and (min-width: 1360px)"
-            srcSet={`
-                    ${formWebX1} 1x,
-                    ${formWebX2} 2x
-                  `}
-            type="image/webp"
-          />
-          <source
             type="image/jpeg"
             media="screen and (min-width: 1360px)"
             srcSet={`
@@ -56,16 +48,16 @@ const CollbackForm = () => {
             type="image/jpeg"
             media="screen and (min-width: 769px)"
             srcSet={`
-                    ${formMdX1} 1x,
-                    ${formMdX2} 2x
+                    ${formLgX1} 1x,
+                    ${formLgX2} 2x
                   `}
           />
           <source
             type="image/jpeg"
             media="screen and (min-width: 768px)"
             srcSet={`
-                    ${formLgX1} 1x,
-                    ${formLgX2} 2x
+                    ${formMdX1} 1x,
+                    ${formMdX2} 2x
                   `}
           />
           <source

@@ -13,7 +13,7 @@ import people2Web1x from '../../images/team/person2.webp';
 import people2Web2x from '../../images/team/person2@2x.webp';
 import people2LLL1x from '../../images/team/person2LLLx1.jpg';
 import people2LLL2x from '../../images/team/person2LLLx2.jpg';
-import people2XXX1x from '../../images/team/person3XXXx1.jpg';
+import people2XXX1x from '../../images/team/person2XXXx1.jpg';
 import people2XXX2x from '../../images/team/person2XXXx2.jpg';
 
 import people3MMM1x from '../../images/team/person3MMMx1.jpg';
