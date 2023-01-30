@@ -15,7 +15,7 @@ import {
 import icons from '../../images/sprite.svg';
 import { useFormik } from 'formik';
 import formSmX1 from '../../images/form/form-sm@-x1.png';
-import formSmX2 from '../../images/form/form-sm@-x2.png';
+// import formSmX2 from '../../images/form/form-sm@-x2.png';
 import formMdX1 from '../../images/form/form-md@-x1.png';
 import formMdX2 from '../../images/form/form-md@-x2.png';
 import formLgX1 from '../../images/form/form-lg@-x1.png';
@@ -31,6 +31,9 @@ const CollbackForm = () => {
     },
     validationSchema: schema,
   });
+  console.log('formik.errors.email :>> ', formik.errors.email);
+  console.log('formik.errors.name :>> ', formik.errors.name);
+  console.log('formik.touched.email :>> ', formik.touched.email);
   return (
     <Wrapper>
       <Div>
@@ -59,21 +62,21 @@ const CollbackForm = () => {
                     ${formMdX2} 2x
                   `}
           />
-          <source
+          {/* <source
             type="image/jpeg"
             media="screen and (max-width: 767px)"
             srcSet={`
                     ${formSmX1} 1x,
                     ${formSmX2} 2x
                   `}
-          />
+          /> */}
           <Img
             type="image/web"
             srcSet={`
             ${formWebX1} 2x,
             ${formWebX2} 1x,
             `}
-            src={formWebX1}
+            src={formSmX1}
             alt="фото"
           />
         </picture>
@@ -98,9 +101,18 @@ const CollbackForm = () => {
               name="name"
               type="text"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               value={formik.values.name}
             ></Input>
             <Placeholder>Enter your name</Placeholder>
+            {formik?.errors?.name && formik?.touched?.name ? (
+              <Validation>
+                <svg>
+                  <use href={`${icons}#worning`}></use>
+                </svg>
+                <span>{formik?.errors?.name}</span>
+              </Validation>
+            ) : null}
           </Lable>
           <Lable>
             <Input
@@ -118,7 +130,7 @@ const CollbackForm = () => {
                 <svg>
                   <use href={`${icons}#worning`}></use>
                 </svg>
-                <span>{formik.errors.email}</span>
+                <span>{formik?.errors?.email}</span>
               </Validation>
             ) : null}
           </Lable>
@@ -126,7 +138,8 @@ const CollbackForm = () => {
             disabled={
               Boolean(!formik.values.email) ||
               Boolean(!formik.values.name) ||
-              Boolean(formik.errors.email)
+              Boolean(formik.errors.email) ||
+              Boolean(formik.errors.name)
             }
             errors={formik.errors.email}
             touched={formik.touched.email}

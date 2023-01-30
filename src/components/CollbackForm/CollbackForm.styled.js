@@ -164,12 +164,13 @@ export const Lable = styled.label`
 `;
 
 export const Validation = styled.div`
+  position: absolute;
   display: flex;
   justify-content: flex-start;
   text-align: left;
-  position: absolute;
+
   top: 57px;
-  left: 8px;
+  left: 20%;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -180,6 +181,7 @@ export const Validation = styled.div`
   animation: show 1000ms cubic-bezier(0.43, 0.21, 0, 1.03);
   animation-iteration-count: revert-layer;
   span {
+    display: inline-block;
     width: 100%;
   }
   svg {

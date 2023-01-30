@@ -57,7 +57,6 @@ const OurTeam = () => {
                     ${imgLg2x} 2x
                   `}
                     />
-
                     <source
                       type="image/jpeg"
                       media="screen and (min-width: 768px)"
@@ -66,21 +65,21 @@ const OurTeam = () => {
                     ${imgMd2x} 2x
                   `}
                     />
-                    <source
+                    {/* <source
                       type="image/jpeg"
                       media="screen and (max-width: 767px)"
                       srcSet={`
                     ${imgSm1x} 1x,
                     ${imgSm2x} 2x
                   `}
-                    />
+                    /> */}
                     <Img
                       type="image/web"
                       srcSet={`
                        ${imgWeb1x} 2x,
                        ${imgWeb2x} 1x,
                        `}
-                      src={imgWeb1x}
+                      src={imgSm1x}
                       alt="фото"
                     />
                   </picture>

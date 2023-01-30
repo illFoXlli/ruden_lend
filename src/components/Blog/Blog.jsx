@@ -14,7 +14,7 @@ import peopleXXX2x from '../../images/blog/RectangleXXX2x.jpg';
 import peopleLLL1x from '../../images/blog/RectangleLLL1x.jpg';
 import peopleLLL2x from '../../images/blog/RectangleLLL2x.jpg';
 import peopleMMM1x from '../../images/blog/RectangleMMM1x.jpg';
-import peopleMMM2x from '../../images/blog/RectangleMMM2x.jpg';
+// import peopleMMM2x from '../../images/blog/RectangleMMM2x.jpg';
 import peopleWeb1x from '../../images/blog/people.webp';
 import peopleWeb2x from '../../images/blog/people@2x.webp';
 
@@ -48,21 +48,21 @@ const Blog = () => {
                     ${peopleLLL2x} 2x
                   `}
             />
-            <source
+            {/* <source
               type="image/jpeg"
               media="screen and (max-width: 767px)"
               srcSet={`
                     ${peopleMMM1x} 1x,
                     ${peopleMMM2x} 2x
                   `}
-            />
+            /> */}
             <Img
               type="image/web"
               srcSet={`
             ${peopleWeb2x} 2x,
             ${peopleWeb1x} 1x,
             `}
-              src={peopleWeb1x}
+              src={peopleMMM1x}
               alt="фото"
             />
           </picture>

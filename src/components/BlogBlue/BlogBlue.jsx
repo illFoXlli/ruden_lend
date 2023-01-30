@@ -14,7 +14,7 @@ import peopleXXX2x from '../../images/blogBlue/RectangleXXX2x.jpg';
 import peopleLLL1x from '../../images/blogBlue/RectangleLLL1x.jpg';
 import peopleLLL2x from '../../images/blogBlue/RectangleLLL2x.jpg';
 import peopleMMM1x from '../../images/blogBlue/RectangleMMM1x.jpg';
-import peopleMMM2x from '../../images/blogBlue/RectangleMMM2x.jpg';
+// import peopleMMM2x from '../../images/blogBlue/RectangleMMM2x.jpg';
 import peopleWeb1x from '../../images/blogBlue/blog.webp';
 import peopleWeb2x from '../../images/blogBlue/blog@2x.webp';
 
@@ -48,21 +48,21 @@ const BlogBlue = () => {
                     ${peopleLLL2x} 2x
                   `}
             />
-            <source
+            {/* <source
               type="image/jpeg"
               media="screen and (max-width: 767px)"
               srcSet={`
                     ${peopleMMM1x} 1x,
                     ${peopleMMM2x} 2x
                   `}
-            />
+            /> */}
             <Img
               type="image/web"
               srcSet={`
             ${peopleWeb2x} 2x,
             ${peopleWeb1x} 1x,
             `}
-              src={peopleWeb1x}
+              src={peopleMMM1x}
               alt="фото"
             />
           </picture>

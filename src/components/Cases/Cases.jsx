@@ -75,14 +75,14 @@ const Cases = ({ setShow }) => {
                     ${src.imgMMM2x} 2x
                   `}
                     />
-                    <source
+                    {/* <source
                       type="image/jpeg"
                       media="screen and (max-width: 767px)"
                       srcSet={`
                     ${src.imgMMM1x} 1x,
                     ${src.imgMMM2x} 2x
                   `}
-                    />
+                    /> */}
                     <Img
                       srcSet={`
                     ${src.imgWeb2x} 2x,
