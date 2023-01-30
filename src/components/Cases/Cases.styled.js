@@ -47,7 +47,7 @@ export const Item = styled.li`
 
 export const Img = styled(LazyLoadImage)`
   width: 280px;
-
+  height: 176px;
   display: block;
 
   margin-left: auto;
@@ -66,9 +66,11 @@ export const Img = styled(LazyLoadImage)`
   }
   ${props => props.theme.breakpoints.tab} {
     width: 223px;
+    height: 148px;
   }
   ${props => props.theme.breakpoints.desc} {
     width: 420px;
+    height: 280px;
   }
 `;
 

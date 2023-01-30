@@ -161,7 +161,7 @@ export const Img = styled.img`
   /* width: calc(${props => props.width}px - 20px); */
 
   width: ${({ width, height }) =>
-    height < width * 0.6285 - 20
+    height < width * 0.6285 + 100 - 20
       ? `${(height - 100) * 1.591}px`
       : `${width - 20}px`};
 
@@ -180,14 +180,14 @@ export const Img = styled.img`
   ${props => props.theme.breakpoints.tab} {
     /* width: ${({ width }) => (width < 1000 ? `${width - 160}px` : '840px')};*/
     width: ${({ width, height }) =>
-      height < width * 0.6285 - 160
+      height < width * 0.69 - 160 + 100
         ? `${(height - 100) * 1.591}px`
         : `${width - 160}px`};
 
     height: ${({ width, height }) =>
-      height < width * 0.6285 - 160 + 100
+      height < width * 0.69 - 160 + 100
         ? `${height - 100}px`
-        : `${width * 0.6285 - 160}px`};
+        : `${width * 0.69 - 160}px`};
     border: 7px solid #fff;
     border-radius: 4px;
   }
@@ -196,14 +196,14 @@ export const Img = styled.img`
     /* width: calc(1360px - 160px);
     height: ${(1360 - 160) * 0.6285}px; */
     width: ${({ width, height }) =>
-      height < width * 0.6285 - 160
+      height < width * 0.69 - 160
         ? `${(height - 100) * 1.591}px`
         : `${1360 - 160}px`};
 
     height: ${({ width, height }) =>
-      height < width * 0.6285 - 160
+      height < width * 0.69 - 160
         ? `${height - 100}px`
-        : `${1360 * 0.6285 - 160}px`};
+        : `${1360 * 0.69 - 160}px`};
     border: 9px solid #fff;
     border-radius: 4px;
   }
