@@ -88,6 +88,7 @@ export const Button = styled.button`
     background-color: #fff;
     border: 2px solid #808080;
     color: #808080;
+    cursor: not-allowed;
   }
   ${props => props.theme.breakpoints.tab} {
   }
