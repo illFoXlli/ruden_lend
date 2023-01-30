@@ -206,8 +206,7 @@ export const Div = styled.div`
   margin-left: auto;
   margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
-  
+  }
   ${props => props.theme.breakpoints.desc} {
-
   }
 `;
