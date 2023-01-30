@@ -15,6 +15,7 @@ import {
 const ReactSimpleImageViewer = props => {
   const [currentIndex, setCurrentIndex] = useState(props.currentIndex ?? 0);
   const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   const changeImage = useCallback(
     delta => {
@@ -92,13 +93,20 @@ const ReactSimpleImageViewer = props => {
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     });
+    window.addEventListener('resize', () => {
+      setHeight(window.innerHeight);
+    });
+
     return () => {
       window.removeEventListener('resize', () => {
         setWidth(window.innerWidth);
       });
+      window.removeEventListener('resize', () => {
+        setHeight(window.innerHeight);
+      });
     };
-  }, [width]);
-  console.log(props.src[currentIndex]);
+  }, [width, height]);
+  console.log(height);
   return (
     <Wrapper
       id="ReactSimpleImageViewer"
@@ -109,7 +117,14 @@ const ReactSimpleImageViewer = props => {
       <Div>
         <Content onClick={handleClick}>
           <Slide>
-            {<Img src={props.src[currentIndex]} width={width} alt="" />}
+            {
+              <Img
+                src={props.src[currentIndex]}
+                width={width}
+                height={height}
+                alt=""
+              />
+            }
           </Slide>
           <SpanClose onClick={() => props.onClose?.()}>
             <FiX />

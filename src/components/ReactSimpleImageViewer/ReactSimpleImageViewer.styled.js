@@ -158,7 +158,17 @@ export const Slide = styled.div`
 `;
 
 export const Img = styled.img`
-  width: calc(${props => props.width}px - 20px);
+  /* width: calc(${props => props.width}px - 20px); */
+
+  width: ${({ width, height }) =>
+    height < width * 0.6285 - 20
+      ? `${(height - 100) * 1.591}px`
+      : `${width - 20}px`};
+
+  height: ${({ width, height }) =>
+    height < width * 0.6285 - 20 + 100
+      ? `${height - 100}px`
+      : `${width * 0.6285 - 20}px`};
 
   user-select: none;
   border: 5px solid #fff;
@@ -168,11 +178,25 @@ export const Img = styled.img`
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
   ${props => props.theme.breakpoints.tab} {
-    width: ${({ width }) => (width < 1000 ? `${width - 160}px` : '840px')};
+    /* width: ${({ width }) => (width < 1000 ? `${width - 160}px` : '840px')};*/
+    width: ${({ width, height }) =>
+      height < width * 0.6285 - 160
+        ? `${(height - 100) * 1.591}px`
+        : `${width - 160}px`};
+
+    height: ${({ width, height }) =>
+      height < width * 0.6285 - 160 + 100
+        ? `${height - 100}px`
+        : `${width * 0.6285 - 160}px`};
+    border: 7px solid #fff;
+    border-radius: 4px;
   }
 
   ${props => props.theme.breakpoints.desc} {
-    width: 900px;
+    width: calc(1360px - 160px);
+    height: ${(1360 - 160) * 0.6285}px;
+    border: 9px solid #fff;
+    border-radius: 4px;
   }
 `;
 
@@ -182,11 +206,8 @@ export const Div = styled.div`
   margin-left: auto;
   margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
-    border: 7px solid #fff;
-    border-radius: 4px;
-  }
+  
   ${props => props.theme.breakpoints.desc} {
-    border: 9px solid #fff;
-    border-radius: 4px;
+
   }
 `;
