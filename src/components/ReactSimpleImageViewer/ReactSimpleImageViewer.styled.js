@@ -209,6 +209,17 @@ export const Img = styled.img`
   }
 `;
 
+export const WrapperLoaded = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
 export const Div = styled.div`
   position: relative;
 

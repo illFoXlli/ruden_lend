@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { Oval } from 'react-loader-spinner';
 
 import {
   Img,
@@ -10,6 +11,7 @@ import {
   Title,
   Wrapper,
   WrapperContent,
+  WrapperLoaded,
 } from './Cases.styled';
 import {
   imgDataMob,
@@ -24,10 +26,14 @@ import {
   useIsDesktop,
 } from '../../hooks/uselsMobile';
 import ReactSimpleImageViewer from '../ReactSimpleImageViewer/ReactSimpleImageViewer';
+import { useImageLoaded } from '../../hooks/useImageLoaded';
 
 const Cases = ({ setShow }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [ref1, loaded1, onLoad1] = useImageLoaded();
+  const [ref2, loaded2, onLoad2] = useImageLoaded();
+  const [ref3, loaded3, onLoad3] = useImageLoaded();
 
   const openImageViewer = useCallback(index => {
     setCurrentImage(index);
@@ -41,7 +47,8 @@ const Cases = ({ setShow }) => {
     setIsViewerOpen(false);
     setShow(false);
   };
-
+  // console.log('loaded :>> ', loaded);
+  // console.log('ref.current.complete :>> ', ref.current?.complete?.state.loaded);
   return (
     <>
       <Wrapper currentImage={currentImage}>
@@ -75,15 +82,10 @@ const Cases = ({ setShow }) => {
                     ${src.imgMMM2x} 2x
                   `}
                     />
-                    {/* <source
-                      type="image/jpeg"
-                      media="screen and (max-width: 767px)"
-                      srcSet={`
-                    ${src.imgMMM1x} 1x,
-                    ${src.imgMMM2x} 2x
-                  `}
-                    /> */}
+
                     <Img
+                      ref={ref1}
+                      onLoad={onLoad1}
                       srcSet={`
                     ${src.imgWeb2x} 2x,
                     ${src.imgWeb1x} 1x,
@@ -94,6 +96,22 @@ const Cases = ({ setShow }) => {
                       key={index}
                       alt=""
                     />
+                    {loaded1 && (
+                      <WrapperLoaded>
+                        <Oval
+                          height={80}
+                          width={80}
+                          color="#fff"
+                          wrapperStyle={{}}
+                          wrapperClass=""
+                          visible={true}
+                          ariaLabel="oval-loading"
+                          secondaryColor="#4fa94d"
+                          strokeWidth={2}
+                          strokeWidthSecondary={2}
+                        />
+                      </WrapperLoaded>
+                    )}
                   </picture>
                 </Item>
               ))}
@@ -135,12 +153,30 @@ const Cases = ({ setShow }) => {
                   `}
                     />
                     <Img
+                      ref={ref2}
+                      onLoad={onLoad2}
                       src={src.imgLLL1x}
                       onClick={() => openImageViewer(index)}
                       width="300"
                       key={index}
                       alt=""
                     />
+                    {loaded2 && (
+                      <WrapperLoaded>
+                        <Oval
+                          height={80}
+                          width={80}
+                          color="#fff"
+                          wrapperStyle={{}}
+                          wrapperClass=""
+                          visible={true}
+                          ariaLabel="oval-loading"
+                          secondaryColor="#4fa94d"
+                          strokeWidth={2}
+                          strokeWidthSecondary={2}
+                        />
+                      </WrapperLoaded>
+                    )}
                   </picture>
                 </Item>
               ))}
@@ -183,12 +219,30 @@ const Cases = ({ setShow }) => {
                   `}
                     />
                     <Img
+                      ref={ref3}
+                      onLoad={onLoad3}
                       src={src.imgXXX1x}
                       onClick={() => openImageViewer(index)}
                       width="300"
                       key={index}
                       alt=""
                     />
+                    {loaded3 && (
+                      <WrapperLoaded>
+                        <Oval
+                          height={80}
+                          width={80}
+                          color="#fff"
+                          wrapperStyle={{}}
+                          wrapperClass=""
+                          visible={true}
+                          ariaLabel="oval-loading"
+                          secondaryColor="#4fa94d"
+                          strokeWidth={2}
+                          strokeWidthSecondary={2}
+                        />
+                      </WrapperLoaded>
+                    )}
                   </picture>
                 </Item>
               ))}

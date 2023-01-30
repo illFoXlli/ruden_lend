@@ -1,4 +1,6 @@
 import { schema } from './Validation';
+import { Oval } from 'react-loader-spinner';
+import { useImageLoaded } from '../../hooks/useImageLoaded';
 import {
   Button,
   Img,
@@ -11,11 +13,11 @@ import {
   Placeholder,
   WrapperForm,
   Div,
+  WrapperLoaded,
 } from './CollbackForm.styled';
 import icons from '../../images/sprite.svg';
 import { useFormik } from 'formik';
 import formSmX1 from '../../images/form/form-sm@-x1.png';
-// import formSmX2 from '../../images/form/form-sm@-x2.png';
 import formMdX1 from '../../images/form/form-md@-x1.png';
 import formMdX2 from '../../images/form/form-md@-x2.png';
 import formLgX1 from '../../images/form/form-lg@-x1.png';
@@ -24,6 +26,8 @@ import formWebX1 from '../../images/form/contact.webp';
 import formWebX2 from '../../images/form/contact@2x.webp';
 
 const CollbackForm = () => {
+  const [ref, loaded, onLoad] = useImageLoaded();
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -31,9 +35,7 @@ const CollbackForm = () => {
     },
     validationSchema: schema,
   });
-  console.log('formik.errors.email :>> ', formik.errors.email);
-  console.log('formik.errors.name :>> ', formik.errors.name);
-  console.log('formik.touched.email :>> ', formik.touched.email);
+
   return (
     <Wrapper>
       <Div>
@@ -62,15 +64,10 @@ const CollbackForm = () => {
                     ${formMdX2} 2x
                   `}
           />
-          {/* <source
-            type="image/jpeg"
-            media="screen and (max-width: 767px)"
-            srcSet={`
-                    ${formSmX1} 1x,
-                    ${formSmX2} 2x
-                  `}
-          /> */}
+
           <Img
+            ref={ref}
+            onLoad={onLoad}
             type="image/web"
             srcSet={`
             ${formWebX1} 2x,
@@ -79,12 +76,27 @@ const CollbackForm = () => {
             src={formSmX1}
             alt="фото"
           />
+          {loaded && (
+            <WrapperLoaded>
+              <Oval
+                height={80}
+                width={80}
+                color="#fff"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="oval-loading"
+                secondaryColor="#4fa94d"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+              />
+            </WrapperLoaded>
+          )}
         </picture>
       </Div>
 
       <WrapperForm>
         <Form
-          // onSubmit={formik.handleSubmit}
           name="contact"
           action="/contact"
           method="POST"

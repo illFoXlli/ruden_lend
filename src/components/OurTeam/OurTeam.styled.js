@@ -185,6 +185,18 @@ export const ItemImg = styled.li`
   position: relative;
 `;
 
+export const WrapperLoaded = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
 export const Div = styled.div`
   position: absolute;
   top: 0;

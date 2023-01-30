@@ -22,7 +22,6 @@ import { useState } from 'react';
 
 const HomePage = () => {
   const [show, setShow] = useState(null);
-  console.log('show :>> ', show);
 
   return (
     <>

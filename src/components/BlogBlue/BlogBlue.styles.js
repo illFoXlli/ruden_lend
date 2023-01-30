@@ -16,9 +16,21 @@ export const Wrapper = styled.div`
 `;
 
 export const Div = styled.div`
-  background-color: ${props => props.theme.colors.background.accent};
+  position: relative;
   ${props => props.theme.breakpoints.tab} {
     flex-basis: 100%;
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
+export const WrapperLoaded = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
   }

@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { Oval } from 'react-loader-spinner';
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { useImageLoaded } from '../../hooks/useImageLoaded';
 
 import {
   Content,
@@ -10,12 +12,14 @@ import {
   Slide,
   SpanClose,
   Wrapper,
+  WrapperLoaded,
 } from './ReactSimpleImageViewer.styled';
 
 const ReactSimpleImageViewer = props => {
   const [currentIndex, setCurrentIndex] = useState(props.currentIndex ?? 0);
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
+  const [ref, loaded, onLoad] = useImageLoaded();
 
   const changeImage = useCallback(
     delta => {
@@ -119,12 +123,30 @@ const ReactSimpleImageViewer = props => {
           <Slide>
             {
               <Img
+                onLoad={onLoad}
+                ref={ref}
                 src={props.src[currentIndex]}
                 width={width}
                 height={height}
                 alt=""
               />
             }
+            {loaded && (
+              <WrapperLoaded>
+                <Oval
+                  height={80}
+                  width={80}
+                  color="#fff"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="oval-loading"
+                  secondaryColor="#4fa94d"
+                  strokeWidth={2}
+                  strokeWidthSecondary={2}
+                />
+              </WrapperLoaded>
+            )}
           </Slide>
           <SpanClose onClick={() => props.onClose?.()}>
             <FiX />

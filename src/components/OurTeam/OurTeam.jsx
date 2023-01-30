@@ -1,3 +1,5 @@
+import { Oval } from 'react-loader-spinner';
+import { useImageLoaded } from '../../hooks/useImageLoaded';
 import { imegesData } from './ImegesData';
 import {
   Div,
@@ -14,6 +16,7 @@ import {
   Wrapper,
   WrapperContact,
   WrapperContent,
+  WrapperLoaded,
 } from './OurTeam.styled';
 import icons from '../../images/sprite.svg';
 import { Container } from '../../page/HomePage/HomePage.styled';
@@ -21,6 +24,7 @@ import { Container } from '../../page/HomePage/HomePage.styled';
 const dataSvg = ['#facebook', '#twitter', '#youtube', '#in'];
 
 const OurTeam = () => {
+  const [ref, loaded, onLoad] = useImageLoaded();
   return (
     <>
       <Wrapper>
@@ -65,15 +69,9 @@ const OurTeam = () => {
                     ${imgMd2x} 2x
                   `}
                     />
-                    {/* <source
-                      type="image/jpeg"
-                      media="screen and (max-width: 767px)"
-                      srcSet={`
-                    ${imgSm1x} 1x,
-                    ${imgSm2x} 2x
-                  `}
-                    /> */}
                     <Img
+                      ref={ref}
+                      onLoad={onLoad}
                       type="image/web"
                       srcSet={`
                        ${imgWeb1x} 2x,
@@ -82,7 +80,24 @@ const OurTeam = () => {
                       src={imgSm1x}
                       alt="фото"
                     />
+                    {loaded && (
+                      <WrapperLoaded>
+                        <Oval
+                          height={80}
+                          width={80}
+                          color="#fff"
+                          wrapperStyle={{}}
+                          wrapperClass=""
+                          visible={true}
+                          ariaLabel="oval-loading"
+                          secondaryColor="#4fa94d"
+                          strokeWidth={2}
+                          strokeWidthSecondary={2}
+                        />
+                      </WrapperLoaded>
+                    )}
                   </picture>
+
                   <Div>
                     <List>
                       {dataSvg.map(image => (

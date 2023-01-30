@@ -38,6 +38,7 @@ export const ListItem = styled.ul`
 `;
 
 export const Item = styled.li`
+  position: relative;
   flex-basis: calc((100% - 18 * 2) / 3);
   ${props => props.theme.breakpoints.tab} {
   }
@@ -71,6 +72,17 @@ export const Img = styled(LazyLoadImage)`
   ${props => props.theme.breakpoints.desc} {
     width: 420px;
     height: 280px;
+  }
+`;
+
+export const WrapperLoaded = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
   }
 `;
 

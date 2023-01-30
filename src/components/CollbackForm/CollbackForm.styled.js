@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
   }
 `;
 export const Div = styled.div`
+  position: relative;
   ${props => props.theme.breakpoints.tab} {
     max-width: 48%;
     flex-basis: 100%;
@@ -24,6 +25,19 @@ export const Div = styled.div`
     max-width: 670px;
   }
 `;
+
+export const WrapperLoaded = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
 export const Img = styled(LazyLoadImage)`
   width: 100%;
 

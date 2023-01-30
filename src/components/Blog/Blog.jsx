@@ -1,3 +1,5 @@
+import { Oval } from 'react-loader-spinner';
+import { useImageLoaded } from '../../hooks/useImageLoaded';
 import {
   Button,
   Div,
@@ -8,17 +10,18 @@ import {
   Wrapper,
   WrapperContainer,
   WrapperContent,
+  WrapperLoaded,
 } from './Blog.styles';
 import peopleXXX1x from '../../images/blog/RectangleXXX1x.jpg';
 import peopleXXX2x from '../../images/blog/RectangleXXX2x.jpg';
 import peopleLLL1x from '../../images/blog/RectangleLLL1x.jpg';
 import peopleLLL2x from '../../images/blog/RectangleLLL2x.jpg';
 import peopleMMM1x from '../../images/blog/RectangleMMM1x.jpg';
-// import peopleMMM2x from '../../images/blog/RectangleMMM2x.jpg';
 import peopleWeb1x from '../../images/blog/people.webp';
 import peopleWeb2x from '../../images/blog/people@2x.webp';
 
 const Blog = () => {
+  const [ref, loaded, onLoad] = useImageLoaded();
   return (
     <>
       <Wrapper>
@@ -48,15 +51,10 @@ const Blog = () => {
                     ${peopleLLL2x} 2x
                   `}
             />
-            {/* <source
-              type="image/jpeg"
-              media="screen and (max-width: 767px)"
-              srcSet={`
-                    ${peopleMMM1x} 1x,
-                    ${peopleMMM2x} 2x
-                  `}
-            /> */}
+
             <Img
+              ref={ref}
+              onLoad={onLoad}
               type="image/web"
               srcSet={`
             ${peopleWeb2x} 2x,
@@ -65,6 +63,22 @@ const Blog = () => {
               src={peopleMMM1x}
               alt="фото"
             />
+            {loaded && (
+              <WrapperLoaded>
+                <Oval
+                  height={80}
+                  width={80}
+                  color="#fff"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="oval-loading"
+                  secondaryColor="#4fa94d"
+                  strokeWidth={2}
+                  strokeWidthSecondary={2}
+                />
+              </WrapperLoaded>
+            )}
           </picture>
         </Div>
 
