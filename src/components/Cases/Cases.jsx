@@ -1,4 +1,4 @@
-import React, { useState, useCallback} from 'react';
+import React, { useState, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import {
@@ -25,18 +25,20 @@ import {
 } from '../../hooks/uselsMobile';
 import ReactSimpleImageViewer from '../ReactSimpleImageViewer/ReactSimpleImageViewer';
 
-const Cases = () => {
+const Cases = ({ setShow }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   const openImageViewer = useCallback(index => {
     setCurrentImage(index);
     setIsViewerOpen(true);
+    setShow(true);
   }, []);
 
   const closeImageViewer = () => {
     setCurrentImage(0);
     setIsViewerOpen(false);
+    setShow(false);
   };
 
   return (

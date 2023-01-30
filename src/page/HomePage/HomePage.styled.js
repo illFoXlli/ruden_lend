@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Div = styled.div`
+  overflow-y: ${({ show }) => (!show ? `none` : 'overlay')};
+  height: ${({ show }) => (show ? `100vh` : '100%')};
+  /* scroll-behavior: ${({ show }) => (show ? `smooth` : 'auto')}; */
+
+  position: relative;
+`;
+
 export const Container = styled.div`
   position: relative;
   margin-left: auto;

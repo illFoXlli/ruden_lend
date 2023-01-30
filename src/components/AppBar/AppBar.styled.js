@@ -43,7 +43,7 @@ export const LinkItemNav = styled(Link)`
   line-height: ${p => p.theme.lineHeights.secondary};
   text-decoration: none;
 
-  transition-property: opacity;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
@@ -55,11 +55,10 @@ export const LinkItemNav = styled(Link)`
       content: '';
       position: absolute;
       bottom: -5px;
-      left: -10px;
 
       display: block;
 
-      width: calc(100% + 20px);
+      width: calc(100%);
       height: 2px;
       background: ${props => props.theme.colors.background.accent};
       border-radius: 50px;

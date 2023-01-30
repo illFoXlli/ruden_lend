@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Wrapper = styled.div`
   padding-bottom: 50px;
@@ -84,7 +85,7 @@ export const Position = styled.p`
   }
 `;
 
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
   width: 280px;
   height: 186px;
   display: block;
@@ -169,6 +170,13 @@ export const Item = styled.li`
     width: 35px;
     height: 35px;
     fill: #ffffff;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+    :focus,
+    :hover {
+      fill: #28a745;
+    }
     use {
     }
   }

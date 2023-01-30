@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Container } from '../../page/HomePage/HomePage.styled';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.background.accent};
   ${props => props.theme.breakpoints.tab} {
@@ -43,7 +45,7 @@ export const WrapperContent = styled.div`
   }
 `;
 
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
   width: 100%;
   display: block;
   ${props => props.theme.breakpoints.tab} {

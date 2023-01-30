@@ -5,6 +5,7 @@ import heroL1 from '../../images/hero/RectangleLLL1x.png';
 import heroL2 from '../../images/hero/RectangleLLL2x.png';
 import heroX1 from '../../images/hero/RectangleXXX1x.png';
 import heroX2 from '../../images/hero/RectangleXXX2x.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Wrapper = styled.div`
   display: flex;

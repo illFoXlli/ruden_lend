@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Wrapper = styled.div`
   background: #f4f4f4;
@@ -23,7 +24,7 @@ export const Div = styled.div`
     max-width: 670px;
   }
 `;
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
   width: 100%;
 
   ${props => props.theme.breakpoints.tab} {
@@ -83,7 +84,10 @@ export const Button = styled.button`
   :hover {
     opacity: 0.8;
   }
-  :active {
+  :disabled {
+    background-color: #fff;
+    border: 2px solid #808080;
+    color: #808080;
   }
   ${props => props.theme.breakpoints.tab} {
   }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Wrapper = styled.div`
   padding-bottom: 40px;
@@ -44,7 +45,7 @@ export const Item = styled.li`
   }
 `;
 
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
   width: 280px;
 
   display: block;

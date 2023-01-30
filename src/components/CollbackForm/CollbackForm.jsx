@@ -31,7 +31,6 @@ const CollbackForm = () => {
     },
     validationSchema: schema,
   });
-
   return (
     <Wrapper>
       <Div>
@@ -82,11 +81,11 @@ const CollbackForm = () => {
 
       <WrapperForm>
         <Form
+          // onSubmit={formik.handleSubmit}
           name="contact"
           action="/contact"
           method="POST"
           data-netlify="true"
-          noValidate
           netlify
         >
           <input type="hidden" name="form-name" value="contact"></input>
@@ -94,7 +93,6 @@ const CollbackForm = () => {
           <Title>Request Callback</Title>
           <Lable>
             <Input
-              required
               placeholder="value"
               id="name"
               name="name"
@@ -124,8 +122,18 @@ const CollbackForm = () => {
               </Validation>
             ) : null}
           </Lable>
-
-          <Button type="submit">Send</Button>
+          <Button
+            disabled={
+              Boolean(!formik.values.email) ||
+              Boolean(!formik.values.name) ||
+              Boolean(formik.errors.email)
+            }
+            errors={formik.errors.email}
+            touched={formik.touched.email}
+            type="submit"
+          >
+            Send
+          </Button>
         </Form>
       </WrapperForm>
     </Wrapper>
