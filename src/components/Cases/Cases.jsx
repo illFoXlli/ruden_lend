@@ -33,6 +33,7 @@ const Cases = ({ setShow }) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
     setShow(true);
+    // eslint-disable-next-line
   }, []);
 
   const closeImageViewer = () => {
