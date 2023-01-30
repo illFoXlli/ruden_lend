@@ -86,12 +86,11 @@ export const Position = styled.p`
 `;
 
 export const Img = styled(LazyLoadImage)`
-  width: 280px;
-  height: 186px;
+  /* width: 280px;
+  height: 186px; */
+  width: 100%;
+  height: 100%;
   display: block;
-
-  max-width: 100%;
-  height: auto;
 
   object-fit: cover;
   object-position: center;
@@ -175,7 +174,7 @@ export const Item = styled.li`
     transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
     :focus,
     :hover {
-      fill: #28a745;
+      fill: rgba(255, 255, 255, 0.6);
     }
     use {
     }
@@ -183,6 +182,8 @@ export const Item = styled.li`
 `;
 export const ItemImg = styled.li`
   position: relative;
+  width: 100%;
+  height: 100%;
 `;
 
 export const WrapperLoaded = styled.div`
@@ -201,8 +202,10 @@ export const Div = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 280px;
-  height: 186px;
+  /* width: 280px;
+  height: 186px; */
+  width: 100%;
+  height: 100%;
   display: block;
   opacity: 0;
   transition-property: all;

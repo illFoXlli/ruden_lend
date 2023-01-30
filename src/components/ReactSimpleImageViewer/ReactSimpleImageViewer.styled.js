@@ -195,15 +195,16 @@ export const Img = styled.img`
   ${props => props.theme.breakpoints.desc} {
     /* width: calc(1360px - 160px);
     height: ${(1360 - 160) * 0.6285}px; */
+
     width: ${({ width, height }) =>
       height < width * 0.69 - 160
         ? `${(height - 100) * 1.591}px`
-        : `${1360 - 160}px`};
+        : `${1300 - 160}px`};
 
     height: ${({ width, height }) =>
       height < width * 0.69 - 160
         ? `${height - 100}px`
-        : `${1360 * 0.69 - 160}px`};
+        : `${1300 * 0.69 - 160}px`};
     border: 9px solid #fff;
     border-radius: 4px;
   }

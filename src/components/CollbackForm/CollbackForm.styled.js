@@ -100,7 +100,7 @@ export const Button = styled.button`
   }
   :disabled {
     background-color: #fff;
-    border: 2px solid #808080;
+    border: 0px solid #808080;
     color: #808080;
     cursor: not-allowed;
   }
@@ -185,7 +185,7 @@ export const Validation = styled.div`
   text-align: left;
 
   top: 57px;
-  left: 20%;
+  left: 8px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;

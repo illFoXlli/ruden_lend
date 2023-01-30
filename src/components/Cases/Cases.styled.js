@@ -28,7 +28,7 @@ export const ListItem = styled.ul`
   display: flex;
   gap: 17px;
   flex-direction: column;
-
+  justify-content: center;
   ${props => props.theme.breakpoints.tab} {
     flex-direction: initial;
     flex-wrap: wrap;
@@ -47,17 +47,17 @@ export const Item = styled.li`
 `;
 
 export const Img = styled(LazyLoadImage)`
-  width: 280px;
-  height: 176px;
+  /* width: 280px; */
+  /* height: 176px; */
   display: block;
 
   margin-left: auto;
   margin-right: auto;
 
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
 
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: center;
   transition-property: all;
   transition-duration: 500ms;

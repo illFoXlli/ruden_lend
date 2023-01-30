@@ -117,14 +117,14 @@ const CollbackForm = () => {
               value={formik.values.name}
             ></Input>
             <Placeholder>Enter your name</Placeholder>
-            {formik?.errors?.name && formik?.touched?.name ? (
+            {/* {formik?.errors?.name && formik?.touched?.name ? (
               <Validation>
                 <svg>
                   <use href={`${icons}#worning`}></use>
                 </svg>
                 <span>{formik?.errors?.name}</span>
               </Validation>
-            ) : null}
+            ) : null} */}
           </Lable>
           <Lable>
             <Input
@@ -148,10 +148,7 @@ const CollbackForm = () => {
           </Lable>
           <Button
             disabled={
-              Boolean(!formik.values.email) ||
-              Boolean(!formik.values.name) ||
-              Boolean(formik.errors.email) ||
-              Boolean(formik.errors.name)
+              Boolean(!formik.values.email) || Boolean(formik.errors.email)
             }
             errors={formik.errors.email}
             touched={formik.touched.email}

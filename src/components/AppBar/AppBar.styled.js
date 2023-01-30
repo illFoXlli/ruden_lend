@@ -55,10 +55,10 @@ export const LinkItemNav = styled(Link)`
       content: '';
       position: absolute;
       bottom: -5px;
-
+      right: -10px;
       display: block;
 
-      width: calc(100%);
+      width: calc(100% + 20px);
       height: 2px;
       background: ${props => props.theme.colors.background.accent};
       border-radius: 50px;
@@ -66,6 +66,22 @@ export const LinkItemNav = styled(Link)`
   }
   ${props => props.theme.breakpoints.tab} {
     font-size: ${props => props.theme.fontSizes.ms};
+    bottom: -8px;
+    :focus-visible:not(.active),
+    :hover:not(.active) {
+      ::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        right: -20px;
+        display: block;
+
+        width: calc(100% + 40px);
+        height: 2px;
+        background: ${props => props.theme.colors.background.accent};
+        border-radius: 50px;
+      }
+    }
   }
   ${props => props.theme.breakpoints.desc} {
   }
