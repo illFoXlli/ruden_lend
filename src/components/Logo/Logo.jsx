@@ -3,7 +3,7 @@ import logo from '../../images/sprite.svg';
 
 const Logo = ({ backgroundColor }) => {
   return (
-    <Wrapper>
+    <Wrapper href="" target="_blank">
       <SpanZero>
         <svg>
           <use href={`${logo}#logo`}></use>

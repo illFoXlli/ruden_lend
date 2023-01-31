@@ -10,7 +10,7 @@ const Hero = () => {
           <Сontext>
             <Title>The Sky Is The Limit</Title>
             <Text>We provide world class financial assistance</Text>
-            <Button>
+            <Button type="button">
               <svg width="9px" height="18px">
                 <use href={`${button}#arrow`}></use>
               </svg>

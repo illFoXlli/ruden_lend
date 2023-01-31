@@ -38,11 +38,12 @@ export const SpanTwo = styled.span`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
   background-color: transparent;
+  cursor: pointer;
 
   transition-property: all;
   transition-duration: 250ms;

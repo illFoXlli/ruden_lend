@@ -90,7 +90,7 @@ const BlogBlue = () => {
               aliquid impedit harum illum dolore explicabo ab dolores itaque
               rerum temporibus doloribus iste maiores deleniti?
             </Text>
-            <Button>Read More</Button>
+            <Button type="button">Read More</Button>
           </WrapperContent>
         </WrapperContainer>
       </Wrapper>

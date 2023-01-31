@@ -22,6 +22,12 @@ import icons from '../../images/sprite.svg';
 import { Container } from '../../page/HomePage/HomePage.styled';
 
 const dataSvg = ['#facebook', '#twitter', '#youtube', '#in'];
+const dataHref = [
+  'https://uk-ua.facebook.com/',
+  'https://twitter.com/',
+  'https://www.youtube.com/',
+  'https://www.linkedin.com/feed/',
+];
 
 const OurTeam = () => {
   const [ref, loaded, onLoad] = useImageLoaded();
@@ -100,11 +106,17 @@ const OurTeam = () => {
 
                   <Div>
                     <List>
-                      {dataSvg.map(image => (
+                      {dataSvg.map((image, i) => (
                         <Item key={image}>
-                          <svg>
-                            <use href={`${icons}${image}`}></use>
-                          </svg>
+                          <a
+                            href={dataHref[i]}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <svg>
+                              <use href={`${icons}${image}`}></use>
+                            </svg>
+                          </a>
                         </Item>
                       ))}
                     </List>

@@ -39,6 +39,7 @@ export const ListItem = styled.ul`
 
 export const Item = styled.li`
   position: relative;
+
   flex-basis: calc((100% - 18 * 2) / 3);
   ${props => props.theme.breakpoints.tab} {
   }
@@ -50,6 +51,7 @@ export const Img = styled(LazyLoadImage)`
   /* width: 280px; */
   /* height: 176px; */
   display: block;
+  cursor: pointer;
 
   margin-left: auto;
   margin-right: auto;
@@ -63,7 +65,7 @@ export const Img = styled(LazyLoadImage)`
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
   &:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
   }
   ${props => props.theme.breakpoints.tab} {
     width: 223px;

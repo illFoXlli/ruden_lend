@@ -47,8 +47,7 @@ const Cases = ({ setShow }) => {
     setIsViewerOpen(false);
     setShow(false);
   };
-  // console.log('loaded :>> ', loaded);
-  // console.log('ref.current.complete :>> ', ref.current?.complete?.state.loaded);
+
   return (
     <>
       <Wrapper currentImage={currentImage}>
