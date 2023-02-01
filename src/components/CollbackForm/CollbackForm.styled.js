@@ -106,7 +106,6 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
   ${props => props.theme.breakpoints.tab} {
-    padding-bottom: 0;
   }
   ${props => props.theme.breakpoints.desc} {
   }
