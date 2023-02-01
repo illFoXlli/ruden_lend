@@ -151,6 +151,7 @@ export const Slide = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #333333;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
