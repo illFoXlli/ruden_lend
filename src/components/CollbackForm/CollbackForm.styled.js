@@ -52,13 +52,13 @@ export const Img = styled(LazyLoadImage)`
 export const WrapperForm = styled.div`
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 51px;
+  padding-top: 51px;
   ${props => props.theme.breakpoints.tab} {
     flex-basis: 100%;
-    margin-top: 32px;
+    padding-top: 32px;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-top: 56px;
+    padding-top: 56px;
   }
 `;
 
@@ -68,6 +68,7 @@ export const Form = styled.form`
   gap: 20px;
   padding-bottom: 25px;
   ${props => props.theme.breakpoints.tab} {
+    padding-bottom: 0;
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -105,6 +106,7 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
   ${props => props.theme.breakpoints.tab} {
+    padding-bottom: 0;
   }
   ${props => props.theme.breakpoints.desc} {
   }

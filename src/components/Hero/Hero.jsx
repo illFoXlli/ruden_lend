@@ -6,18 +6,16 @@ const Hero = () => {
   return (
     <>
       <Wrapper>
-        <Container>
-          <Сontext>
-            <Title>The Sky Is The Limit</Title>
-            <Text>We provide world class financial assistance</Text>
-            <Button type="button">
-              <svg width="9px" height="18px">
-                <use href={`${button}#arrow`}></use>
-              </svg>
-              Read More
-            </Button>
-          </Сontext>
-        </Container>
+        <Сontext>
+          <Title>The Sky Is The Limit</Title>
+          <Text>We provide world class financial assistance</Text>
+          <Button type="button">
+            <svg width="9px" height="18px">
+              <use href={`${button}#arrow`}></use>
+            </svg>
+            Read More
+          </Button>
+        </Сontext>
       </Wrapper>
     </>
   );

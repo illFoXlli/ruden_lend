@@ -117,14 +117,6 @@ const CollbackForm = () => {
               value={formik.values.name}
             ></Input>
             <Placeholder>Enter your name</Placeholder>
-            {/* {formik?.errors?.name && formik?.touched?.name ? (
-              <Validation>
-                <svg>
-                  <use href={`${icons}#worning`}></use>
-                </svg>
-                <span>{formik?.errors?.name}</span>
-              </Validation>
-            ) : null} */}
           </Lable>
           <Lable>
             <Input

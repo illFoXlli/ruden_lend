@@ -81,17 +81,15 @@ const BlogBlue = () => {
           </picture>
         </Div>
         <WrapperContainer>
-          <WrapperContent>
-            <Preview>April 16 2020</Preview>
-            <Title>Blog Post One</Title>
-            <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptate, ipsum dignissimos quae laudantium asperiores nam
-              aliquid impedit harum illum dolore explicabo ab dolores itaque
-              rerum temporibus doloribus iste maiores deleniti?
-            </Text>
-            <Button type="button">Read More</Button>
-          </WrapperContent>
+          <Preview>April 16 2020</Preview>
+          <Title>Blog Post One</Title>
+          <Text>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+            ipsum dignissimos quae laudantium asperiores nam aliquid impedit
+            harum illum dolore explicabo ab dolores itaque rerum temporibus
+            doloribus iste maiores deleniti?
+          </Text>
+          <Button type="button">Read More</Button>
         </WrapperContainer>
       </Wrapper>
     </>

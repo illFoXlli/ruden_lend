@@ -25,23 +25,17 @@ export const Div = styled.div`
 `;
 
 export const WrapperContainer = styled(Container)`
+  padding-bottom: 79px;
+  padding-top: 79px;
+  color: ${props => props.theme.colors.white};
+  font-weight: ${props => props.theme.fontWeights.normal};
+
   ${props => props.theme.breakpoints.tab} {
+    padding-bottom: 62px;
   }
   ${props => props.theme.breakpoints.desc} {
     padding-left: 20px;
     padding-right: 28px;
-  }
-`;
-
-export const WrapperContent = styled.div`
-  padding-bottom: 79px;
-  color: ${props => props.theme.colors.white};
-  font-weight: ${props => props.theme.fontWeights.normal};
-  ${props => props.theme.breakpoints.tab} {
-    padding-bottom: 62px;
-  }
-
-  ${props => props.theme.breakpoints.desc} {
     padding-bottom: 86px;
   }
 `;
@@ -73,7 +67,7 @@ export const Preview = styled.h3`
   font-size: ${p => p.theme.fontSizes.m};
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
-  margin-top: 79px;
+
   ${props => props.theme.breakpoints.tab} {
     font-size: ${p => p.theme.fontSizes.ms};
   }

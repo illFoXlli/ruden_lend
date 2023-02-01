@@ -83,17 +83,15 @@ const Blog = () => {
         </Div>
 
         <WrapperContainer>
-          <WrapperContent>
-            <Preview>What you are looking for</Preview>
-            <Title>We provide bespoke solutions</Title>
-            <Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptate, ipsum dignissimos quae laudantium asperiores nam
-              aliquid impedit harum illum dolore explicabo ab dolores itaque
-              rerum temporibus doloribus iste maiores deleniti?
-            </Text>
-            <Button type="button">Read More</Button>
-          </WrapperContent>
+          <Preview>What you are looking for</Preview>
+          <Title>We provide bespoke solutions</Title>
+          <Text>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+            ipsum dignissimos quae laudantium asperiores nam aliquid impedit
+            harum illum dolore explicabo ab dolores itaque rerum temporibus
+            doloribus iste maiores deleniti?
+          </Text>
+          <Button type="button">Read More</Button>
         </WrapperContainer>
       </Wrapper>
     </>

@@ -37,22 +37,18 @@ export const WrapperLoaded = styled.div`
 `;
 
 export const WrapperContainer = styled(Container)`
+  padding-bottom: 58px;
+  padding-top: 48px;
+  color: ${props => props.theme.colors.white};
+  font-weight: ${props => props.theme.fontWeights.normal};
   ${props => props.theme.breakpoints.tab} {
+    padding-top: 59px;
+    padding-bottom: 59px;
   }
   ${props => props.theme.breakpoints.desc} {
     padding-left: 28px;
     padding-right: 20px;
-  }
-`;
-
-export const WrapperContent = styled.div`
-  padding-bottom: 58px;
-  color: ${props => props.theme.colors.white};
-  font-weight: ${props => props.theme.fontWeights.normal};
-  ${props => props.theme.breakpoints.tab} {
-    padding-bottom: 59px;
-  }
-  ${props => props.theme.breakpoints.desc} {
+    padding-top: 80px;
     padding-bottom: 80px;
   }
 `;
@@ -72,13 +68,11 @@ export const Preview = styled.h3`
   font-size: ${p => p.theme.fontSizes.m};
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
-  margin-top: 48px;
+
   ${props => props.theme.breakpoints.tab} {
     font-size: ${p => p.theme.fontSizes.ms};
-    margin-top: 59px;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-top: 80px;
   }
 `;
 

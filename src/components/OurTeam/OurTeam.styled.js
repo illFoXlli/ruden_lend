@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Container } from '../../page/HomePage/HomePage.styled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Container)`
   padding-bottom: 50px;
   padding-top: 75px;
 

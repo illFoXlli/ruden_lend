@@ -73,13 +73,16 @@ export const Wrapper = styled.div`
 export const Сontext = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 104px;
+  margin-bottom: 104px;
+  margin-top: 62px;
 
   ${props => props.theme.breakpoints.tab} {
-    padding-bottom: 378px;
+    margin-bottom: 378px;
+    margin-top: 314px;
   }
   ${props => props.theme.breakpoints.desc} {
-    padding-bottom: 270px;
+    margin-bottom: 270px;
+    margin-top: 192px;
   }
 `;
 
@@ -88,18 +91,16 @@ export const Title = styled.h1`
   font-size: ${props => props.theme.fontSizes.xll};
   color: ${props => props.theme.colors.white};
   text-align: center;
-  margin-top: 62px;
+
   width: 240px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 
   ${props => props.theme.breakpoints.tab} {
-    margin-top: 314px;
     width: 100%;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-top: 192px;
   }
 `;
 

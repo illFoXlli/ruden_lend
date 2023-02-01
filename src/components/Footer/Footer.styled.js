@@ -6,6 +6,8 @@ export const Wrapper = styled.footer`
   background: #333333;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -18,7 +20,6 @@ export const List = styled.ul`
   gap: 25px;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 12px;
 `;
 export const Item = styled.li`
@@ -39,7 +40,6 @@ export const Item = styled.li`
   }
 `;
 export const Text = styled.p`
-  margin-bottom: 20px;
   text-align: center;
   color: #ffffff;
   font-weight: 400;
